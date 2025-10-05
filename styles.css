@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    padding-top: 20px;
+    text-align: center;
+}
+
+label{
+    align-self: center;
+}
+
+.container{
+    margin: auto;
+    margin-top: 15px;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+}
+
+.containertwo{
+    margin-top: 10px;
+}
+
+
+#search-button{
+    padding: 7px;
+}
+
+#searchForm {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  gap: 10px;
+  width: 60%;
+}
+
+#creature-name{
+    font-weight: bold;
+    font-size: large;
+    margin-right: 5px;
+}
+
+#weight, #height{
+    margin-top: 5px;
+}
