@@ -15,6 +15,13 @@ searchForm.addEventListener('submit', async e =>{
     try {
         const data = await getFromAPI(input.value.toLowerCase());
         console.log(data);
+
+        const {name, id, weight, height, special, stats, types} = data; //DESTRUCTURE
+        creatureName.textContent = name;
+        creatureID.textContent += id;
+        creatureWeight.textContent += weight;
+        creatureHeight.textContent += height;
+
     } catch (error) {
         console.error('Caught an error.');
     }
