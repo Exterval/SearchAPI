@@ -1,7 +1,26 @@
+:root{
+    --bg-color: #F5F5F0;
+    --second-bg-color: #E6D8C3;
+    --text-color: #C2A68C;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    background: #F5F5F0;
+    background: linear-gradient(331deg, rgba(245, 245, 240, 1) 0%, rgba(230, 216, 195, 1) 100%);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    height: 100%;
 }
 
 h1{
@@ -15,7 +34,7 @@ label{
 
 .container{
     margin: auto;
-    margin-top: 15px;
+    margin-top: 35px;
     width: 500px;
     height: 300px;
     text-align: center;
@@ -23,6 +42,39 @@ label{
 
 .containertwo{
     margin-top: 10px;
+}
+
+.containerthree{
+    margin: auto;
+    margin-top: 50px;
+}
+
+#types{
+    margin-top: 15px;
+}
+
+.typeChip{
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 100px ;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+caption{
+    margin-bottom: 10px;
+}
+
+#loading{
+    background-color: aqua;
+    padding: 50px;
+    display: none;
 }
 
 
@@ -35,10 +87,15 @@ label{
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
+  margin-bottom: 30px;
   padding: 15px;
   border-radius: 8px 8px 0 0;
   gap: 10px;
   width: 60%;
+  background-color: #E6D8C3;
+  border-radius: 40px;
+  box-shadow: 1px 10px 20px hsla(0, 0%, 0%, 0.248);
+  border: 1px solid rgba(216, 216, 216, 0.329);
 }
 
 #creature-name{

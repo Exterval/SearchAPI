@@ -15,16 +15,54 @@
         <input type="text" name="search" id="search-input" placeholder="use a name or ID!" required>
         <button id="search-button">Search</button>
     </form>
+
+        <div id="loading">
+
+        </div>
         <div class="containertwo">
-            <span id="creature-name">Name of Creature</span> <span id="creature-id">#</span>
-            <p id="weight">Weight: </p>
-            <p id="height">Height: </p>
+            <span id="creature-name"></span> <span id="creature-id"></span>
+            <p id="weight"></p>
+            <p id="height"></p>
+            <div id="types">
+                
+            </div>
         </div>
 
-    </div>
-    
-    
-    
+        <div class="containerthree">
+            <table border="1">
+                <tr>
+                    <th>Base</th>
+                    <th>Stats</th>
+                </tr>
+                <tr>
+                    <td>HP</td>
+                    <td id="hp"></td>
+                </tr>
+                <tr>
+                    <td>Attack</td>
+                    <td id="attack"></td>
+                </tr>
+                <tr>
+                    <td>Defense</td>
+                    <td id="defense"></td>
+                </tr>
+                <tr>
+                    <td>Special-Attack</td>
+                    <td id="special-attack"></td>
+                </tr>
+                <tr>
+                    <td>Special-Defense</td>
+                    <td id="special-defense"></td>
+                </tr>
+                <tr>
+                    <td>Speed</td>
+                    <td id="speed"></td>
+                </tr>
+                <caption>Creature Stats</caption>
+            </table>
+        </div>
+        
+    </div>   
 <script src="script.js"></script>
 </body>
 </html>
