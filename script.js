@@ -6,7 +6,9 @@ const creatureID = document.getElementById('creature-id');
 const creatureWeight = document.getElementById('weight');
 const creatureHeight= document.getElementById('height');
 const loading = document.getElementById('loading');
-const types = document.getElementById('types');
+const typesDiv = document.getElementById('types');
+const specialName = document.getElementById('special-name');
+const specialDescription = document.getElementById('special-desc');
 
 /* STATS  */
 const hp = document.getElementById('hp');
@@ -45,9 +47,14 @@ searchForm.addEventListener('submit', async e =>{
         types.forEach(element => {
             const type = document.createElement('div');
             type.classList.add('typeChip');
-            type.textContent = element.name;
+            type.textContent = element.name.toUpperCase();
             type.style.backgroundColor = creatureType(element.name);
+            typesDiv.append(type);
         });
+
+        //special
+        specialName.textContent = special.name;
+        specialDescription.textContent = special.description;
     } catch (error) {
         console.error(`Caught error ${error}`);
         
@@ -68,16 +75,34 @@ async function getFromAPI(input){
 }
 
 const reset = () =>{
+    const collection = typesDiv.children;
+    Array.from(collection).forEach(elem => typesDiv.removeChild(elem));
     creatureName.textContent = '';
     creatureID.textContent = '';
     creatureHeight.textContent = '';
     creatureWeight.textContent = '';
+    specialName.textContent = '';
+    specialDescription.textContent = '';
 }
 
 const creatureType = (typeName) =>{
     switch(typeName){
-        case 'Fire': return '#e25822';
-        case '': 
+        case 'fire': return '#e25822';
+        case 'ice': return '#DBF1FD';
+        case 'fairy': return '#FFF4FA';
+        case 'water': return '#91e2f8ff';
+        case 'grass': return '#009A17';
+        case 'poison': return '#4db560';
+        case 'electric': return '#FFFF33';
+        case 'dragon': return '#5060e1';
+        case 'flying': return '#81B9EF';
+        case 'ground': return '#915121';
+        case 'bug': return '#91A119';
+        case 'psychic': return '#EF4179';
+        case 'ghost': return '#704170';
+        case 'dark':  return '#624D4E';
+        case 'rock': return '#AFA981';
+        case 'steel': return '#60A1B8';
     }
     return '';
 }
